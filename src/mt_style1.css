@@ -1,0 +1,60 @@
+.output {
+    background-color: rgb(235, 245, 245);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.85;
+    font-family: 'Times New Roman', Times, serif;
+    color:#5F9EA0; /* Set text color to white */
+ 
+
+}
+
+ 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 150%;
+    color: #5F9EA0;
+}
+
+a {
+    color: #5F9EA0; /* Set link color to cadet blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.track-header {
+    display: flex;
+    justify-content:space-between;
+}
+
+.track-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-info {
+    display: flex;
+    justify-content:space-between;
+
+}
+
+ 
+.artist-images img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 50%;  
+}
+
+.circular-image {
+    border-radius: 50%;
+}

@@ -1,6 +1,7 @@
  
 import React, { useState } from 'react';
 import ArtistProfile from './mt_api';  
+import AudioPlayer from './mt_audio';
 
 function App() {
   const [showArtistProfile, setShowArtistProfile] = useState(false);
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div className="Apps">
+   <AudioPlayer></AudioPlayer>
       <br />
       <br />
       <div className='Head'>

@@ -4,12 +4,14 @@ Integrated with the Spotify API, used sentiment analysis on the song name to pre
 
 
 
-![Screenshot 2024-02-17 195812](https://github.com/DS-1090/MoodTunes_WebApp/assets/126580400/c1ea282e-88cc-4140-a355-a3b5bb6a4d94)
+![image](https://github.com/user-attachments/assets/b854fe08-3aa5-4afd-8a51-0a804e22f395)
 
+![image](https://github.com/user-attachments/assets/613e7a3c-e901-403d-8fce-0f7c9b028d51)
+![image](https://github.com/user-attachments/assets/2dd0671b-5072-4046-8498-bb1f3bf72422)
+![image](https://github.com/user-attachments/assets/c81538d1-7447-4f98-a054-a49d991169a5)
+![image](https://github.com/user-attachments/assets/f6980544-6160-41fd-93d9-550dcce3d1ec)
+![image](https://github.com/user-attachments/assets/1c6e2026-2532-480d-b418-4c43318520d1)
 
-![Uploading image.png…]()
-
-![image](https://github.com/DS-1090/MoodTunes_WebApp/assets/126580400/a506e527-9a41-49b2-9c75-21186c7d748c)
 
 
 # Getting Started with Create React App

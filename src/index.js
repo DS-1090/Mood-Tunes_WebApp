@@ -5,7 +5,6 @@ import App from './mt_app.js';
 import reportWebVitals from './reportWebVitals';
 import Navbars from './mt_nav.js';
 import AboutPage from './mt_about.js';
-import AudioPlayer from './mt_audio.js'; 
 
 function Footer(){
   return(
@@ -23,7 +22,6 @@ root.render(
     <App />
     <AboutPage/>
     <Footer/>
-    <AudioPlayer/>
   </React.StrictMode>
 );
 //    <ArtistProfile/>

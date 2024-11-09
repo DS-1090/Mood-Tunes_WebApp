@@ -11,12 +11,13 @@ var ARTIST_ID = "06HL4z0CvFAxyc27GXpf02";
 
 async function getArtistID() {
     var sel = document.getElementById('ArtistSelect').value;
-    if (sel == "Taylor Swift")
-        ARTIST_ID = "06HL4z0CvFAxyc27GXpf02";
-    else if (sel == "AR Rahman")
-        ARTIST_ID = "1mYsTxnqsietFxj1OgoGbG";
-    else if(sel == "Shreya Ghosal")
-        ARTIST_ID = "0oOet2f43PA68X5RxKobEy";
+    if (sel == "Taylor Swift") ARTIST_ID = "06HL4z0CvFAxyc27GXpf02";
+    else if (sel == "Adele") ARTIST_ID = "4dpARuHxo51G3z768sgnrY";
+    else if (sel == "Ariana Grande") ARTIST_ID = "66CXWjxzNUsdJxJ2JdwvnR";
+    else if (sel == "Harry Styles") ARTIST_ID = "6KImCVD70vtIoJWnq6nGn3";
+    else if (sel == "Billie Ellish") ARTIST_ID = "6qqNVTkY8uBg9cP3Jd7DAH";
+    
+    
 }
 
 async function getAccessToken() {
@@ -125,47 +126,70 @@ const ArtistProfile = () => {
 
   return (
     <div className="output">
-<h4 style={{ color: 'CadetBlue', fontSize: 50 }}>Artist</h4>
-<h5 style={{ color: 'CadetBlue', fontSize: 30 }}>Genres:</h5>
+      <h4 style={{ color: "CadetBlue", fontSize: 50 }}>Artist</h4>
+      <h5 style={{ color: "CadetBlue", fontSize: 30 }}>Genres:</h5>
       <ul>
         {genres.map((genre, index) => (
           <li key={index}>{genre}</li>
         ))}
       </ul>
-      <div className="artist-images">
+      <div className="artist-images" style={{ marginBottom: "20px" }}>
         {artistImages.length > 0 && (
           <img
             src={artistImages[0].url}
-            alt={`Artist Image`}
+            alt="Artist Image"
             className="circular-image"
+            style={{ width: "200px", height: "200px", borderRadius: "50%" }}
           />
         )}
       </div>
-      <div className="track-header">
-        <h4  style={{ color: 'CadetBlue', fontSize: 25 }}>Track Name</h4>
-        <h4 style={{ color: 'CadetBlue', fontSize: 25 }}>Mood</h4>
 
-        <h4 style={{ color: 'CadetBlue', fontSize: 25 }}>Duration</h4>
-    </div>
-      <ul>
-        {topTracks.map((track, index) => (
-          <li key={index} className="track-item">
-            <div className="track-info">
-              <h5 style={{ color: 'CadetBlue' }}>
+      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <thead>
+          <tr>
+            <th style={{ padding: "10px", color: "CadetBlue", fontSize: 25 }}>
+              Track Name
+            </th>
+            <th style={{ padding: "10px", color: "CadetBlue", fontSize: 25 }}>
+              Mood
+            </th>
+            <th style={{ padding: "10px", color: "CadetBlue", fontSize: 25 }}>
+              Duration
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {topTracks.map((track, index) => (
+            <tr key={index}>
+              <td
+                style={{ padding: "8px", color: "CadetBlue", fontSize: "150%" }}
+              >
                 <a
                   href={track.external_urls.spotify}
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    color: "CadetBlue",
+                  }}
                 >
                   {track.name}
                 </a>
-              </h5>
-              <h5> {      sentimentCategories[index]              }</h5>
-               <h5> {Math.round(track.duration_ms / 60000)} minutes</h5>
-            </div>
-          </li>
-        ))}
-      </ul>
+              </td>
+              <td
+                style={{ padding: "8px", color: "CadetBlue", fontSize: "150%" }}
+              >
+                {sentimentCategories[index]}
+              </td>
+              <td
+                style={{ padding: "8px", color: "CadetBlue", fontSize: "150%" }}
+              >
+                {Math.round(track.duration_ms / 60000)} minutes
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

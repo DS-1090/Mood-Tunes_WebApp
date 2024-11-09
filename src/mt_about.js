@@ -10,7 +10,7 @@ function AboutPage() {
       <br></br><br></br>
       <div className="about" id="about">
 
-      <p className="boxes">
+      <div className="boxes">
         <div className="one">
         <strong>Tech Stack:</strong><br></br><br></br>
        
@@ -25,7 +25,7 @@ function AboutPage() {
           <strong>Spotify Integration:</strong><br></br> <br></br>With a single click, listen to your selected song directly on Spotify.
            Immerse yourself in the music without any hassle. 
         </div>
-       </p>
+       </div>
        </div>
      </div>
   );
